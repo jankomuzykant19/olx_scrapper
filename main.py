@@ -5,6 +5,8 @@
 # Testy dla innych województw
 import parse as p
 import raport as r
+import flat as f
+import plot as pl
 
 choice = input("[1] Scrape offers from OLX\n[2] Get offers from database\n")
 if choice == "1":
@@ -18,15 +20,6 @@ if choice == "2":
 
 r.print_raport(flats)
 
-avg_city_size = []
-avg_city_price = []
-avg_city_price_m2 = []
-#for x in range(len(f.get_all_cities(flats))):
-#     avg_city_size.append(f.average_size_city(f.get_all_cities(flats)[x], flats))
-#     avg_city_price.append(f.average_price_city(f.get_all_cities(flats)[x], flats))
-#     avg_city_price_m2.append(f.average_price_m2_city(f.get_all_cities(flats)[x], flats))
-
-# plot.city_size(f.get_all_cities(flats), avg_city_size)
-# plot.city_price(f.get_all_cities(flats), avg_city_price)
-# plot.city_price_m2(f.get_all_cities(flats), avg_city_price_m2)
-
+pl.city_size(f.get_all_cities(flats), pl.get_avg_city_size(flats))
+pl.city_price(f.get_all_cities(flats), pl.get_avg_city_price(flats))
+pl.city_price_m2(f.get_all_cities(flats), pl.get_avg_city_price_m2(flats))
