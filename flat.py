@@ -158,3 +158,37 @@ def amount_offer_city(city, tab):
         if city == tab[x].location:
             offers = offers + 1
     return offers
+
+
+def average_size(tab):
+    size = 0
+    for x in range(len(tab)):
+        size = size + tab[x].size
+    return float(round(size / len(tab), 2))
+
+
+def average_price(tab):
+    price = 0
+    for x in range(len(tab)):
+        price = price + tab[x].price
+    return float(round(price / len(tab), 2))
+
+
+def most_expensive_flat(tab):
+    price = 0
+    nr = 0
+    for x in range(len(tab)):
+        if tab[x].price > price:
+            price = tab[x].price
+            nr = x
+    return nr
+
+
+def biggest_flat(tab):
+    size = 0
+    nr = 0
+    for x in range(len(tab)):
+        if tab[x].size > size:
+            size = tab[x].size
+            nr = x
+    return nr

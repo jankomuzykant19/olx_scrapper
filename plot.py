@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
+
 import flat as f
+
 
 def get_avg_city_size(flats):
     avg_city_size = []

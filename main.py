@@ -3,10 +3,10 @@
 # Pomyśleć nad wprowadzaniem danych przez użytkownika
 # Więcej wykresów
 # Testy dla innych województw
-import parse as p
-import raport as r
 import flat as f
+import parse as p
 import plot as pl
+import raport as r
 
 choice = input("[1] Scrape offers from OLX\n[2] Get offers from database\n")
 if choice == "1":
