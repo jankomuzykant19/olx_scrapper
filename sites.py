@@ -24,7 +24,7 @@ def get_size(a, link):
     if a == "OTODOM":
         otodom_page = get(link)
         bs_otodom = BeautifulSoup(otodom_page.content, 'html.parser')
-        size_otodom = bs_otodom.find('div', class_='css-1ytkscc ecjfvbm0').get_text()
+        size_otodom = bs_otodom.find('div', class_='css-1ytkscc ev4i3ak0').get_text()
         return size_otodom
 
 
@@ -41,7 +41,7 @@ def get_rooms(a, link):
     if a == "OTODOM":
         otodom_page = get(link)
         bs_otodom = BeautifulSoup(otodom_page.content, 'html.parser')
-        rooms_otodom = bs_otodom.find_all('div', class_='css-1ytkscc ecjfvbm0')
+        rooms_otodom = bs_otodom.find_all('div', class_='css-1ytkscc ev4i3ak0')
         if rooms_otodom[1].get_text().isnumeric():
             return rooms_otodom[1].get_text()
         elif rooms_otodom[2].get_text().isnumeric():

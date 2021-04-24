@@ -26,4 +26,3 @@ def print_raport(flats):
             f'Average price of flat: {f.average_price_city(cities[x], flats)}zł, biggest price of flat: {f.biggest_price_city(cities[x], flats)}zł, smallest price of flat: {f.smallest_price_city(cities[x], flats)}zł')
         print(
             f'Average size of flat: {f.average_size_city(cities[x], flats)} m2, biggest size of flat: {f.biggest_size_city(cities[x], flats)} m2, smallest size of flat: {f.smallest_size_city(cities[x], flats)} m2\n')
-        break
